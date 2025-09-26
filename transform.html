@@ -3,93 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Animation - Transform</title>
+    <title>Document</title>
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            border: 2px solid ;
+            width: 60%;
+            gap: 20px;
+            padding: 20px;
         }
-        .box1{
-            width: 200px;
+        .box{
             height: 200px;
-            background:lightgreen;
-            transition: 1s;
-            margin-top: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: lightblue;
+            text-align: center;
+            align-content: center;
         }
-        .box1:hover{
-            /* transform: translateY(100px); right side 100px move aagum
-            transform: translateY(-100px); left side 100px move aagum
-            transform: translateY(100px); bottom side 100px move aagum
-            transform: translateY(-100px);top side 100px move aagum */
-            transform: translate(200px,200px);
-            transition: 1s;
+        .b1:hover{
+             transform: rotate(100deg);
+             /* transform: translate(100px); */
+             /* transform: scale(1.1); */
+             /* transform: skew(10deg); */
+             background: pink;
         }
-        .box2{
-            width: 200px;
-            height: 200px;
-            background:lightblue;
-            transition: 1s;
-            display: block;
-            margin-top: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .box2:hover{
-            transition: 1s;
-            transform: rotate(90deg);
-            /* transform: rotateX(90deg);
-            transform: rotateY(90deg); */
-        }
-        .box3{
-            width: 200px;
-            height: 200px;
-            background:lightcyan;
-            transition: 1s;
-            display: block;
-            margin-top: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .box3:hover{
-            transition: 1s;
-            transform: scale(2);
-            /* transform: rotateX(90deg);
-            transform: rotateY(90deg); */
-        }
-        .box4{
-            width: 200px;
-            height: 200px;
-            background:lightgoldenrodyellow;
-            transition: 1s;
-            display: block;
-            margin-top: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .box4:hover{
-            transition: 1s;
-            transform: skew(40deg);
-            /*transform: skewX(40deg);
-            transform: skewY(40deg); */
+        .b2:hover{
+            transform: rotate3d(1,1,1,20deg);
         }
     </style>
 </head>
 <body>
-    <div class="div">
-        <div class="box1">Translate</div>
-        <div class="box2">Rotate</div>
-        <div class="box3">Scale</div>
-        <div class="box4">Skew</div>
+    <div class="container">
+        <div class="box b1">box1</div>
+        <div class="box b2">box1</div>
     </div>
     
 </body>
