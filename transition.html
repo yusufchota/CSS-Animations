@@ -6,15 +6,16 @@
     <title>CSS Transition</title>
     <style>
         .container{
-            width: 93%;
+            width: 70%;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(2,1fr);
             gap: 20px;
             border: 1px solid black;
             padding: 20px;
         }
         .box{
             height: 200px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,30 +37,56 @@
             background: lightcoral;
         }
         .b4:hover{
+            transform: skew(-30deg);
+            background: lightcoral;
+        }
+        .b5:hover{
             transform: scale(1.2);
             background: lightgray;
         }
-        .b5:hover{
+        .b6:hover{
+            transform: scale(-1);
+            background: lightgreen;
+        }
+        .b7:hover{
             transform: translate(80px);
             background: lightsalmon;
         }
-        .b6:hover{
+        .b8:hover{
             transform: translate(-80px);
             background: lightseagreen;
+        }
+        .b9:hover{
+            transform: rotate3d(1,1,1,360deg);
+        }
+        .b10:hover{
+            transform: rotate3d(1,1,1,-360deg);
+        }
+        .b11:hover{
+            transform: rotateX(180deg);
+        }
+        .b12:hover{
+            transform: rotateY(180deg);
         }
     </style>
 </head>
 <body>
     <h1>CSS Transition</h1>
     <div class="container">
-        <div class="box b1">Transition Rotate</div>
-        <div class="box b2">Transition Rotate Negative</div>
-        <div class="box b3">Transition Skew</div>
-        <div class="box b4">Transition Scale</div>
-        <div class="box b5">Transition Translate</div>
+        <div class="box b1">Transition Rotate 360deg</div>
+        <div class="box b2">Transition Rotate Negative -360deg</div>
+        <div class="box b3">Transition Skew 30deg</div>
+        <div class="box b4">Transition Skew Negative -30deg</div>
+        <div class="box b5">Transition Scale 1.2</div>
+        <div class="box b6">Transition Scale negative -1</div>
+        <div class="box b7">Transition Translate 80px</div>
+        <div class="box b8">Transition Translate Negative -80px</div>
+        <div class="box b9">Rotate 3D 360deg</div>
+        <div class="box b10">Rotate 3D Negative -360deg</div>
+        <div class="box b11">RotateX 180deg</div>
+        <div class="box b12">RotateY 180deg</div>
+        <div class="box b13">Rotate3d 180deg</div>
         
-        <div class="box b6">Transition Translate Negative</div>
     </div>
-        
 </body>
 </html>
