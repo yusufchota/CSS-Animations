@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            border: 2px solid ;
+            width: 60%;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box{
+            height: 200px;
+            background: lightblue;
+            text-align: center;
+            align-content: center;
+        }
+        .b1:hover{
+             transform: rotate(100deg);
+             /* transform: translate(100px); */
+             /* transform: scale(1.1); */
+             /* transform: skew(10deg); */
+             background: pink;
+        }
+        .b2:hover{
+            transform: rotate3d(1,1,1,20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box b1">box1</div>
+        <div class="box b2">box1</div>
+    </div>
+    
+</body>
+</html>

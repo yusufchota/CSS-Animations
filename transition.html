@@ -5,34 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Animation - Transition</title>
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100vh;
+        .container{
+            width: 93%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box{
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: rgb(137, 36, 36);
+            color: white;
+            font-weight: bold;
+            transition: transform 2s ease-in-out;
         }
-        .box1{
-            width: 200px;
-            height: 200px;
-            background: red;
-            transition: 1s;
-            display: block;
+        .b1:hover{
+            transform: rotate(360deg); 
+            background: lightblue;
         }
-        .box1:hover{
-            width: 300px;
-            height: 300px;
-            border: 5px solid black;
-            border-radius: 150px;
-            transition: 0.1s;
-            background: blueviolet;
+        .b2:hover{
+            transform: rotate(-360deg);
+            background: lightseagreen;
         }
-        
+        .b3:hover{
+            transform: skew(30deg);
+            background: lightcoral;
+        }
+        .b4:hover{
+            transform: scale(1.2);
+            background: lightgray;
+        }
+        .b5:hover{
+            transform: translate(80px);
+            background: lightsalmon;
+        }
+        .b6:hover{
+            transform: translate(-80px);
+            background: lightseagreen;
+        }
     </style>
 </head>
 <body>
-        <div class="box1"></div>
+    <h1>CSS Transition</h1>
+    <div class="container">
+        <div class="box b1">Transition Rotate</div>
+        <div class="box b2">Transition Rotate Negative</div>
+        <div class="box b3">Transition Skew</div>
+        <div class="box b4">Transition Scale</div>
+        <div class="box b5">Transition Translate</div>
+        
+        <div class="box b6">Transition Translate Negative</div>
+    </div>
+        
 </body>
 </html>
